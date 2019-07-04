@@ -1,0 +1,140 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     bank-weka.filters.unsupervised.attribute.Remove-R10,12-14-weka.filters.unsupervised.attribute.Remove-R11-12-weka.filters.unsupervised.attribute.Discretize-F-B3-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Discretize-F-B3-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R9
+Instances:    4521
+Attributes:   9
+              age
+              job
+              marital
+              education
+              default
+              balance
+              housing
+              loan
+              y
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.25 (1130 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 15
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 15
+
+Size of set of large itemsets L(2): 41
+
+Size of set of large itemsets L(3): 39
+
+Size of set of large itemsets L(4): 13
+
+Size of set of large itemsets L(5): 1
+
+Best rules found:
+
+  1. balance=980_max y=no 1283 ==> default=no 1283    <conf:(1)> lift:(1.02) lev:(0) [21] conv:(21.57)
+  2. balance=980_max loan=no y=no 1130 ==> default=no 1130    <conf:(1)> lift:(1.02) lev:(0) [18] conv:(19)
+  3. balance=980_max 1508 ==> default=no 1507    <conf:(1)> lift:(1.02) lev:(0.01) [24] conv:(12.68)
+  4. balance=980_max loan=no 1344 ==> default=no 1343    <conf:(1)> lift:(1.02) lev:(0) [21] conv:(11.3)
+  5. balance=175_979 loan=no 1265 ==> default=no 1261    <conf:(1)> lift:(1.01) lev:(0) [17] conv:(4.25)
+  6. balance=175_979 y=no 1346 ==> default=no 1341    <conf:(1)> lift:(1.01) lev:(0) [17] conv:(3.77)
+  7. balance=175_979 1510 ==> default=no 1503    <conf:(1)> lift:(1.01) lev:(0) [18] conv:(3.17)
+  8. housing=no loan=no y=no 1394 ==> default=no 1381    <conf:(0.99)> lift:(1.01) lev:(0) [10] conv:(1.67)
+  9. housing=no loan=no 1677 ==> default=no 1660    <conf:(0.99)> lift:(1.01) lev:(0) [11] conv:(1.57)
+ 10. marital=married loan=no 2344 ==> default=no 2320    <conf:(0.99)> lift:(1.01) lev:(0) [15] conv:(1.58)
+ 11. marital=married loan=no y=no 2091 ==> default=no 2069    <conf:(0.99)> lift:(1.01) lev:(0) [13] conv:(1.53)
+ 12. age=36_46 loan=no y=no 1213 ==> default=no 1200    <conf:(0.99)> lift:(1.01) lev:(0) [7] conv:(1.46)
+ 13. education=tertiary loan=no 1176 ==> default=no 1163    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.41)
+ 14. age=36_46 loan=no 1349 ==> default=no 1334    <conf:(0.99)> lift:(1.01) lev:(0) [7] conv:(1.42)
+ 15. marital=married housing=no 1172 ==> default=no 1158    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.31)
+ 16. education=tertiary 1350 ==> default=no 1333    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.26)
+ 17. marital=married housing=yes loan=no 1345 ==> default=no 1328    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.26)
+ 18. age=36_46 y=no 1420 ==> default=no 1402    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.26)
+ 19. marital=married 2797 ==> default=no 2761    <conf:(0.99)> lift:(1) lev:(0) [11] conv:(1.27)
+ 20. marital=married housing=yes loan=no y=no 1239 ==> default=no 1223    <conf:(0.99)> lift:(1) lev:(0) [4] conv:(1.23)
+ 21. marital=married y=no 2520 ==> default=no 2487    <conf:(0.99)> lift:(1) lev:(0) [9] conv:(1.25)
+ 22. loan=no y=no 3352 ==> default=no 3308    <conf:(0.99)> lift:(1) lev:(0) [12] conv:(1.25)
+ 23. loan=no 3830 ==> default=no 3779    <conf:(0.99)> lift:(1) lev:(0) [13] conv:(1.24)
+ 24. marital=married housing=yes 1625 ==> default=no 1603    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.19)
+ 25. age=47_max loan=no 1248 ==> default=no 1231    <conf:(0.99)> lift:(1) lev:(0) [3] conv:(1.17)
+ 26. education=tertiary y=no 1157 ==> default=no 1141    <conf:(0.99)> lift:(1) lev:(0) [3] conv:(1.14)
+ 27. marital=married education=secondary loan=no 1154 ==> default=no 1138    <conf:(0.99)> lift:(1) lev:(0) [3] conv:(1.14)
+ 28. marital=married housing=yes y=no 1503 ==> default=no 1482    <conf:(0.99)> lift:(1) lev:(0) [4] conv:(1.15)
+ 29. age=36_46 1568 ==> default=no 1546    <conf:(0.99)> lift:(1) lev:(0) [4] conv:(1.15)
+ 30. housing=no y=no 1661 ==> default=no 1636    <conf:(0.98)> lift:(1) lev:(0) [2] conv:(1.07)
+ 31. marital=married education=secondary y=no 1300 ==> default=no 1280    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.04)
+ 32. age=0_35 loan=no 1233 ==> default=no 1214    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.04)
+ 33. housing=yes loan=no 2153 ==> default=no 2119    <conf:(0.98)> lift:(1) lev:(0) [2] conv:(1.03)
+ 34. housing=no 1962 ==> default=no 1931    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.03)
+ 35. housing=yes loan=no y=no 1958 ==> default=no 1927    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.03)
+ 36. marital=married education=secondary 1427 ==> default=no 1404    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(1)
+ 37. y=no 4000 ==> default=no 3933    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(0.99)
+ 38. education=secondary loan=no y=no 1671 ==> default=no 1643    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(0.97)
+ 39. age=47_max 1481 ==> default=no 1456    <conf:(0.98)> lift:(1) lev:(-0) [0] conv:(0.96)
+ 40. education=secondary loan=no 1890 ==> default=no 1858    <conf:(0.98)> lift:(1) lev:(-0) [0] conv:(0.96)
+ 41. education=secondary housing=yes loan=no 1179 ==> default=no 1159    <conf:(0.98)> lift:(1) lev:(-0) [0] conv:(0.94)
+ 42. age=47_max y=no 1286 ==> default=no 1264    <conf:(0.98)> lift:(1) lev:(-0) [0] conv:(0.94)
+ 43. housing=yes 2559 ==> default=no 2514    <conf:(0.98)> lift:(1) lev:(-0) [-1] conv:(0.94)
+ 44. housing=yes y=no 2339 ==> default=no 2297    <conf:(0.98)> lift:(1) lev:(-0) [-2] conv:(0.91)
+ 45. marital=single 1196 ==> default=no 1174    <conf:(0.98)> lift:(1) lev:(-0) [-1] conv:(0.87)
+ 46. education=secondary housing=yes 1430 ==> default=no 1403    <conf:(0.98)> lift:(1) lev:(-0) [-2] conv:(0.86)
+ 47. education=secondary housing=yes y=no 1318 ==> default=no 1293    <conf:(0.98)> lift:(1) lev:(-0) [-2] conv:(0.85)
+ 48. education=secondary y=no 2061 ==> default=no 2021    <conf:(0.98)> lift:(1) lev:(-0) [-5] conv:(0.85)
+ 49. age=0_35 1472 ==> default=no 1443    <conf:(0.98)> lift:(1) lev:(-0) [-4] conv:(0.82)
+ 50. education=secondary 2306 ==> default=no 2260    <conf:(0.98)> lift:(1) lev:(-0) [-7] conv:(0.82)
+ 51. age=0_35 y=no 1294 ==> default=no 1267    <conf:(0.98)> lift:(1) lev:(-0) [-5] conv:(0.78)
+ 52. balance=min_174 loan=no 1221 ==> default=no 1175    <conf:(0.96)> lift:(0.98) lev:(-0.01) [-25] conv:(0.44)
+ 53. balance=min_174 y=no 1371 ==> default=no 1309    <conf:(0.95)> lift:(0.97) lev:(-0.01) [-38] conv:(0.37)
+ 54. balance=min_174 1503 ==> default=no 1435    <conf:(0.95)> lift:(0.97) lev:(-0.01) [-42] conv:(0.37)
+ 55. marital=married housing=yes 1625 ==> y=no 1503    <conf:(0.92)> lift:(1.05) lev:(0.01) [65] conv:(1.52)
+ 56. marital=married default=no housing=yes 1603 ==> y=no 1482    <conf:(0.92)> lift:(1.04) lev:(0.01) [63] conv:(1.51)
+ 57. education=secondary housing=yes 1430 ==> y=no 1318    <conf:(0.92)> lift:(1.04) lev:(0.01) [52] conv:(1.46)
+ 58. education=secondary default=no housing=yes 1403 ==> y=no 1293    <conf:(0.92)> lift:(1.04) lev:(0.01) [51] conv:(1.46)
+ 59. marital=married housing=yes loan=no 1345 ==> y=no 1239    <conf:(0.92)> lift:(1.04) lev:(0.01) [48] conv:(1.45)
+ 60. marital=married default=no housing=yes loan=no 1328 ==> y=no 1223    <conf:(0.92)> lift:(1.04) lev:(0.01) [48] conv:(1.44)
+ 61. housing=yes 2559 ==> y=no 2339    <conf:(0.91)> lift:(1.03) lev:(0.02) [74] conv:(1.33)
+ 62. default=no housing=yes 2514 ==> y=no 2297    <conf:(0.91)> lift:(1.03) lev:(0.02) [72] conv:(1.33)
+ 63. default=no balance=min_174 1435 ==> y=no 1309    <conf:(0.91)> lift:(1.03) lev:(0.01) [39] conv:(1.3)
+ 64. balance=min_174 1503 ==> y=no 1371    <conf:(0.91)> lift:(1.03) lev:(0.01) [41] conv:(1.3)
+ 65. marital=married housing=yes 1625 ==> default=no y=no 1482    <conf:(0.91)> lift:(1.05) lev:(0.02) [68] conv:(1.47)
+ 66. marital=married education=secondary default=no 1404 ==> y=no 1280    <conf:(0.91)> lift:(1.03) lev:(0.01) [37] conv:(1.29)
+ 67. marital=married education=secondary 1427 ==> y=no 1300    <conf:(0.91)> lift:(1.03) lev:(0.01) [37] conv:(1.28)
+ 68. housing=yes loan=no 2153 ==> y=no 1958    <conf:(0.91)> lift:(1.03) lev:(0.01) [53] conv:(1.27)
+ 69. default=no housing=yes loan=no 2119 ==> y=no 1927    <conf:(0.91)> lift:(1.03) lev:(0.01) [52] conv:(1.27)
+ 70. marital=married housing=yes loan=no 1345 ==> default=no y=no 1223    <conf:(0.91)> lift:(1.05) lev:(0.01) [52] conv:(1.42)
+ 71. age=36_46 default=no 1546 ==> y=no 1402    <conf:(0.91)> lift:(1.02) lev:(0.01) [34] conv:(1.23)
+ 72. age=36_46 1568 ==> y=no 1420    <conf:(0.91)> lift:(1.02) lev:(0.01) [32] conv:(1.21)
+ 73. education=secondary housing=yes 1430 ==> default=no y=no 1293    <conf:(0.9)> lift:(1.04) lev:(0.01) [48] conv:(1.35)
+ 74. marital=married 2797 ==> y=no 2520    <conf:(0.9)> lift:(1.02) lev:(0.01) [45] conv:(1.16)
+ 75. marital=married default=no 2761 ==> y=no 2487    <conf:(0.9)> lift:(1.02) lev:(0.01) [44] conv:(1.16)
+ 76. age=36_46 default=no loan=no 1334 ==> y=no 1200    <conf:(0.9)> lift:(1.02) lev:(0) [19] conv:(1.14)
+ 77. age=36_46 loan=no 1349 ==> y=no 1213    <conf:(0.9)> lift:(1.02) lev:(0) [19] conv:(1.13)
+ 78. housing=yes 2559 ==> default=no y=no 2297    <conf:(0.9)> lift:(1.03) lev:(0.02) [70] conv:(1.27)
+ 79. marital=married education=secondary 1427 ==> default=no y=no 1280    <conf:(0.9)> lift:(1.03) lev:(0.01) [38] conv:(1.25)
+ 80. housing=yes loan=no 2153 ==> default=no y=no 1927    <conf:(0.9)> lift:(1.03) lev:(0.01) [54] conv:(1.23)
+ 81. education=secondary default=no 2260 ==> y=no 2021    <conf:(0.89)> lift:(1.01) lev:(0) [21] conv:(1.09)
+ 82. age=36_46 1568 ==> default=no y=no 1402    <conf:(0.89)> lift:(1.03) lev:(0.01) [37] conv:(1.22)
+ 83. education=secondary 2306 ==> y=no 2061    <conf:(0.89)> lift:(1.01) lev:(0) [20] conv:(1.08)
+ 84. default=no balance=175_979 1503 ==> y=no 1341    <conf:(0.89)> lift:(1.01) lev:(0) [11] conv:(1.06)
+ 85. marital=married loan=no 2344 ==> y=no 2091    <conf:(0.89)> lift:(1.01) lev:(0) [17] conv:(1.06)
+ 86. marital=married default=no loan=no 2320 ==> y=no 2069    <conf:(0.89)> lift:(1.01) lev:(0) [16] conv:(1.06)
+ 87. balance=175_979 1510 ==> y=no 1346    <conf:(0.89)> lift:(1.01) lev:(0) [10] conv:(1.05)
+ 88. balance=980_max 1508 ==> loan=no 1344    <conf:(0.89)> lift:(1.05) lev:(0.01) [66] conv:(1.4)
+ 89. default=no balance=980_max 1507 ==> loan=no 1343    <conf:(0.89)> lift:(1.05) lev:(0.01) [66] conv:(1.4)
+ 90. balance=980_max 1508 ==> default=no loan=no 1343    <conf:(0.89)> lift:(1.07) lev:(0.02) [82] conv:(1.49)
+ 91. age=36_46 loan=no 1349 ==> default=no y=no 1200    <conf:(0.89)> lift:(1.02) lev:(0.01) [26] conv:(1.17)
+ 92. marital=married 2797 ==> default=no y=no 2487    <conf:(0.89)> lift:(1.02) lev:(0.01) [53] conv:(1.17)
+ 93. balance=175_979 1510 ==> default=no y=no 1341    <conf:(0.89)> lift:(1.02) lev:(0.01) [27] conv:(1.16)
+ 94. default=no 4445 ==> y=no 3933    <conf:(0.88)> lift:(1) lev:(0) [0] conv:(1)
+ 95. education=secondary default=no loan=no 1858 ==> y=no 1643    <conf:(0.88)> lift:(1) lev:(-0) [0] conv:(0.99)
+ 96. education=secondary loan=no 1890 ==> y=no 1671    <conf:(0.88)> lift:(1) lev:(-0) [-1] conv:(0.99)
+ 97. marital=married loan=no 2344 ==> default=no y=no 2069    <conf:(0.88)> lift:(1.01) lev:(0.01) [29] conv:(1.1)
+ 98. balance=980_max y=no 1283 ==> loan=no 1130    <conf:(0.88)> lift:(1.04) lev:(0.01) [43] conv:(1.27)
+ 99. default=no balance=980_max y=no 1283 ==> loan=no 1130    <conf:(0.88)> lift:(1.04) lev:(0.01) [43] conv:(1.27)
+100. balance=980_max y=no 1283 ==> default=no loan=no 1130    <conf:(0.88)> lift:(1.05) lev:(0.01) [57] conv:(1.37)
+

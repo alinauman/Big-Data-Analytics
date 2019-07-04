@@ -1,0 +1,22 @@
+Remove
+  10 - day: last contact day of the month (numeric)
+ 12 - duration: last contact duration, in seconds (numeric)
+ 13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+  14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+15 - previous: number of contacts performed before this campaign and for this client (numeric)
+  16 - poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success") - Count of Unknown - 3705
+ 11 - month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec") - Less lift Rules Month oriented
+9 - contact: contact communication type (categorical: "unknown","telephone","cellular") 
+
+Noise
+Job - Unknown - 38
+Education - Unknown - 187
+
+
+Discritize
+1. Age 3 Bins
+2. Balance 3 Bins equal_frequency True.
+Rule
+1. Lift = 1.5 
+2. Conf=0.8, Lift=1 which means independent(negate). Thus we continued decreasing the value of the conf metric and the minSupport, it had no 
+effect on the lift, as it remained 1 for most of the generated rules. 

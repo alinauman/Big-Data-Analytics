@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 30 -T 0 -C 0.8 -D 0.025 -U 0.25 -M 0.05 -S -1.0 -c -1
+Relation:     bank-weka.filters.unsupervised.attribute.Remove-R10,12-14-weka.filters.unsupervised.attribute.Remove-R11-12-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R1-precision6
+Instances:    4521
+Attributes:   11
+              age
+              job
+              marital
+              education
+              default
+              balance
+              housing
+              loan
+              contact
+              month
+              y
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.22 (1017 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 31
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 15
+
+Size of set of large itemsets L(2): 65
+
+Size of set of large itemsets L(3): 123
+
+Size of set of large itemsets L(4): 116
+
+Size of set of large itemsets L(5): 51
+
+Size of set of large itemsets L(6): 6
+
+Best rules found:
+
+ 1. age=0_42 education=secondary default=no loan=no 1129 ==> balance=0_11587 1122    <conf:(0.99)> lift:(1.01) lev:(0) [10] conv:(2.19)
+ 2. age=0_42 education=secondary loan=no y=no 1035 ==> balance=0_11587 1028    <conf:(0.99)> lift:(1.01) lev:(0) [9] conv:(2)
+ 3. housing=yes loan=no month=may 1048 ==> balance=0_11587 1039    <conf:(0.99)> lift:(1.01) lev:(0) [7] conv:(1.62)
+ 4. default=no housing=yes loan=no month=may 1030 ==> balance=0_11587 1021    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.59)
+ 5. default=no housing=yes month=may y=no 1123 ==> balance=0_11587 1113    <conf:(0.99)> lift:(1.01) lev:(0) [7] conv:(1.58)
+ 6. loan=no month=may y=no 1127 ==> balance=0_11587 1116    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.45)
+ 7. default=no loan=no month=may y=no 1109 ==> balance=0_11587 1098    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.43)
+ 8. education=secondary housing=yes loan=no y=no 1081 ==> balance=0_11587 1070    <conf:(0.99)> lift:(1.01) lev:(0) [5] conv:(1.39)
+ 9. education=secondary default=no housing=yes loan=no y=no 1063 ==> balance=0_11587 1052    <conf:(0.99)> lift:(1.01) lev:(0) [5] conv:(1.37)
+10. age=0_42 marital=married loan=no 1125 ==> default=no 1113    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.45)
+11. age=0_42 marital=married loan=no 1125 ==> balance=0_11587 1113    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.34)
+12. age=43_64 marital=married balance=0_11587 loan=no 1124 ==> default=no 1112    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.45)
+13. age=0_42 marital=married balance=0_11587 loan=no 1113 ==> default=no 1101    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.44)
+14. age=0_42 marital=married default=no loan=no 1113 ==> balance=0_11587 1101    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.33)
+15. education=tertiary balance=0_11587 loan=no 1143 ==> default=no 1130    <conf:(0.99)> lift:(1.01) lev:(0) [6] conv:(1.37)
+16. marital=married balance=0_11587 housing=no 1144 ==> default=no 1130    <conf:(0.99)> lift:(1) lev:(0) [5] conv:(1.28)
+17. housing=yes loan=no contact=cellular y=no 1072 ==> balance=0_11587 1058    <conf:(0.99)> lift:(1) lev:(0) [2] conv:(1.11)
+18. default=no housing=yes loan=no contact=cellular y=no 1054 ==> balance=0_11587 1040    <conf:(0.99)> lift:(1) lev:(0) [2] conv:(1.09)
+19. marital=married education=secondary loan=no y=no 1039 ==> default=no 1025    <conf:(0.99)> lift:(1) lev:(0) [3] conv:(1.16)
+20. marital=married education=secondary balance=0_11587 loan=no 1136 ==> default=no 1120    <conf:(0.99)> lift:(1) lev:(0) [3] conv:(1.12)
+21. education=tertiary balance=0_11587 y=no 1122 ==> default=no 1106    <conf:(0.99)> lift:(1) lev:(0) [2] conv:(1.11)
+22. loan=no contact=unknown y=no 1071 ==> default=no 1055    <conf:(0.99)> lift:(1) lev:(0) [2] conv:(1.06)
+23. balance=0_11587 loan=no contact=unknown y=no 1051 ==> default=no 1035    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.04)
+24. age=0_42 education=secondary loan=no y=no 1035 ==> default=no 1019    <conf:(0.98)> lift:(1) lev:(0) [1] conv:(1.02)
+25. marital=married education=secondary default=no loan=no 1138 ==> balance=0_11587 1120    <conf:(0.98)> lift:(1) lev:(-0) [0] conv:(0.93)
+26. loan=no month=may y=no 1127 ==> default=no 1109    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(1)
+27. loan=no contact=unknown 1126 ==> default=no 1108    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(1)
+28. balance=0_11587 loan=no month=may y=no 1116 ==> default=no 1098    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(0.99)
+29. marital=single loan=no 1048 ==> default=no 1031    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(0.98)
+30. balance=0_11587 loan=no contact=unknown 1106 ==> default=no 1088    <conf:(0.98)> lift:(1) lev:(0) [0] conv:(0.98)
+

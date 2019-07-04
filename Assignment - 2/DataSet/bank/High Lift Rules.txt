@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 30 -T 1 -C 1.5 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     bank-weka.filters.unsupervised.attribute.Remove-R10,12-14-weka.filters.unsupervised.attribute.Remove-R11-12-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    4521
+Attributes:   10
+              age
+              job
+              marital
+              education
+              default
+              balance
+              housing
+              loan
+              contact
+              y
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (678 instances)
+Minimum metric <lift>: 1.5
+Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 19
+
+Size of set of large itemsets L(2): 91
+
+Size of set of large itemsets L(3): 211
+
+Size of set of large itemsets L(4): 256
+
+Size of set of large itemsets L(5): 163
+
+Size of set of large itemsets L(6): 44
+
+Size of set of large itemsets L(7): 3
+
+Best rules found:
+
+ 1. job=management default=no 955 ==> education=tertiary loan=no 680    conf:(0.71) < lift:(2.74)> lev:(0.1) [431] conv:(2.56)
+ 2. education=tertiary loan=no 1176 ==> job=management default=no 680    conf:(0.58) < lift:(2.74)> lev:(0.1) [431] conv:(1.87)
+ 3. job=management 969 ==> education=tertiary default=no loan=no 680    conf:(0.7) < lift:(2.73)> lev:(0.1) [430] conv:(2.48)
+ 4. education=tertiary default=no loan=no 1163 ==> job=management 680    conf:(0.58) < lift:(2.73)> lev:(0.1) [430] conv:(1.89)
+ 5. job=management 969 ==> education=tertiary loan=no 687    conf:(0.71) < lift:(2.73)> lev:(0.1) [434] conv:(2.53)
+ 6. education=tertiary loan=no 1176 ==> job=management 687    conf:(0.58) < lift:(2.73)> lev:(0.1) [434] conv:(1.89)
+ 7. education=tertiary 1350 ==> job=management default=no 777    conf:(0.58) < lift:(2.72)> lev:(0.11) [491] conv:(1.86)
+ 8. job=management default=no 955 ==> education=tertiary 777    conf:(0.81) < lift:(2.72)> lev:(0.11) [491] conv:(3.74)
+ 9. education=tertiary balance=0_11587 1313 ==> job=management default=no 755    conf:(0.58) < lift:(2.72)> lev:(0.11) [477] conv:(1.85)
+10. job=management default=no 955 ==> education=tertiary balance=0_11587 755    conf:(0.79) < lift:(2.72)> lev:(0.11) [477] conv:(3.37)
+11. job=management default=no balance=0_11587 929 ==> education=tertiary 755    conf:(0.81) < lift:(2.72)> lev:(0.11) [477] conv:(3.72)
+12. education=tertiary 1350 ==> job=management default=no balance=0_11587 755    conf:(0.56) < lift:(2.72)> lev:(0.11) [477] conv:(1.8)
+13. job=management 969 ==> education=tertiary 787    conf:(0.81) < lift:(2.72)> lev:(0.11) [497] conv:(3.71)
+14. education=tertiary 1350 ==> job=management 787    conf:(0.58) < lift:(2.72)> lev:(0.11) [497] conv:(1.88)
+15. job=management 969 ==> education=tertiary default=no 777    conf:(0.8) < lift:(2.72)> lev:(0.11) [491] conv:(3.54)
+16. education=tertiary default=no 1333 ==> job=management 777    conf:(0.58) < lift:(2.72)> lev:(0.11) [491] conv:(1.88)
+17. job=management 969 ==> education=tertiary balance=0_11587 765    conf:(0.79) < lift:(2.72)> lev:(0.11) [483] conv:(3.35)
+18. education=tertiary balance=0_11587 1313 ==> job=management 765    conf:(0.58) < lift:(2.72)> lev:(0.11) [483] conv:(1.88)
+19. job=management 969 ==> education=tertiary default=no balance=0_11587 755    conf:(0.78) < lift:(2.72)> lev:(0.11) [477] conv:(3.21)
+20. education=tertiary default=no balance=0_11587 1296 ==> job=management 755    conf:(0.58) < lift:(2.72)> lev:(0.11) [477] conv:(1.88)
+21. job=management balance=0_11587 943 ==> education=tertiary 765    conf:(0.81) < lift:(2.72)> lev:(0.11) [483] conv:(3.7)
+22. education=tertiary 1350 ==> job=management balance=0_11587 765    conf:(0.57) < lift:(2.72)> lev:(0.11) [483] conv:(1.82)
+23. job=management loan=no 849 ==> education=tertiary default=no 680    conf:(0.8) < lift:(2.72)> lev:(0.1) [429] conv:(3.52)
+24. education=tertiary default=no 1333 ==> job=management loan=no 680    conf:(0.51) < lift:(2.72)> lev:(0.1) [429] conv:(1.66)
+25. education=tertiary default=no 1333 ==> job=management balance=0_11587 755    conf:(0.57) < lift:(2.72)> lev:(0.11) [476] conv:(1.82)
+26. job=management balance=0_11587 943 ==> education=tertiary default=no 755    conf:(0.8) < lift:(2.72)> lev:(0.11) [476] conv:(3.52)
+27. job=management default=no loan=no 839 ==> education=tertiary 680    conf:(0.81) < lift:(2.71)> lev:(0.09) [429] conv:(3.68)
+28. education=tertiary 1350 ==> job=management default=no loan=no 680    conf:(0.5) < lift:(2.71)> lev:(0.09) [429] conv:(1.64)
+29. job=management loan=no 849 ==> education=tertiary 687    conf:(0.81) < lift:(2.71)> lev:(0.1) [433] conv:(3.65)
+30. education=tertiary 1350 ==> job=management loan=no 687    conf:(0.51) < lift:(2.71)> lev:(0.1) [433] conv:(1.65)
+

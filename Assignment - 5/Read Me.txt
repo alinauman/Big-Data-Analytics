@@ -1,0 +1,15 @@
+Sample Dataset has been provided which fulfills every condition
+
+i) Roll-Number {18L1863}, where the letter indicates the campus i.e. L = Lahore,
+   I = Islamabad, K = Karachi, F = Faisalabad, P = Peshawar
+
+ii) Subject
+
+iii) Grade per Subject
+
+The thing to note is that we can have the following things, 
+
+i) Duplicate roll_numbers but either with same subject and same grade or same subject 
+   and different grade or different subject and different grade
+ii) Students are not only in the range from 1995 - 2018, but more to help us filter
+iii) The data is not ordered in any way. 

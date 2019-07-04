@@ -1,0 +1,3 @@
+The partitioner class example was taken from the following source, 
+
+https://www.tutorialspoint.com/map_reduce/map_reduce_partitioner.html

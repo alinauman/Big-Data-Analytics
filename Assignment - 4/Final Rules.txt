@@ -1,0 +1,37 @@
+Best Rules
+All the rules generated must comply to the fact that the client has subscribed a term deposit or not.
+
+24. marital=married 2797 ==> y=no 2520    <conf:(0.9)> lift:(1.02) lev:(0.01) [45] conv:(1.16)
+This is a very important rule with a lift of 1.02, signifying that the married people mostly do not subscribe for a term deposit. 
+There are multiple rules also vindicating this phenomena. 
+
+25. marital=married default=no 2761 ==> y=no 2487    <conf:(0.9)> lift:(1.02) lev:(0.01) [44] conv:(1.16)
+This is also a very similar rule yet it also strongly says that the married people do not have credit in default and thus also do not subscribe to a term deposit.
+ 
+31. marital=married default=no loan=no 2320 ==> y=no 2069    <conf:(0.89)> lift:(1.01) lev:(0) [16] conv:(1.06)
+Overall we can conclude from this assumptions of rules which have very high confidence and high lift that married people tend to take very low risks
+and do not tend to divulge into loans and keep it balanced.
+
+28. education=secondary default=no 2260 ==> y=no 2021    <conf:(0.89)> lift:(1.01) lev:(0) [21] conv:(1.09)
+34. education=secondary default=no loan=no 1858 ==> y=no 1643    <conf:(0.88)> lift:(1) lev:(-0) [0] conv:(0.99)
+People with good educational background rarely take loan as these rules imply that they are self sufficient. The confidence of these rules are high.
+Along with the lift, which signify that they are positively correlated. 
+
+9. job=management 969 ==> education=tertiary 787    conf:(0.81) < lift:(2.72)> lev:(0.11) [497] conv:(3.71)
+1. job=management default=no 955 ==> education=tertiary loan=no 680    conf:(0.71) < lift:(2.74)> lev:(0.1) [431] conv:(2.56)
+People with management jobs are with the highest education and thus are more than self sufficient and do not require any loan from the bank. 
+These rules have very high confidence and very high lift, signifying positive correlation between them. 
+
+age=47_max default=no 1456 ==> marital=married loan=no y=no 817    conf:(0.56) < lift:(1.21)> lev:(0.03) [143] conv:(1.22)
+age=47_max 1481 ==> marital=married default=no loan=no y=no 817    conf:(0.55) < lift:(1.21)> lev:(0.03) [139] conv:(1.21)
+These rules signify that people falling in the age group of 47-max are mostly married people with low risk. 
+They rarely take a loan under extreme circumstances and also they have not subscribed for a term deposit.
+
+housing=yes 2559 ==> y=no 2339    <conf:(0.91)> lift:(1.03) lev:(0.02) [74] conv:(1.33)
+People who have taken the housing loan, do not tend to subscribe for a term deposit. 
+This is genuine as the loan itself is a big thing in itself. 
+
+default=no housing=yes 2514 ==> y=no 2297    <conf:(0.91)> lift:(1.03) lev:(0.02) [72] conv:(1.33)
+This is a very positive rule. Firstly, the count of people with housing loan are very good on there installments and are thus not default in payments. 
+This count is very high as compared to the total entries. 
+Secondly, these people do not subscribe to term deposit, and thus are intelligent enough to not devulge into more issues. 
